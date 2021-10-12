@@ -3,12 +3,7 @@ import { useSelector } from 'react-redux';
 
 function Details() {
   const countries = useSelector((state) => state.countriesReducer);
-  const country = {
-    name: 'amieeee',
-    subregion: 'amin',
-    capital: 'ssd',
-    flags: 'dsd',
-  };
+
   return (
     <div>
       {countries.map((country) => {
