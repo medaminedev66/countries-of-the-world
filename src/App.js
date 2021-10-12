@@ -1,18 +1,22 @@
 import './App.css';
 import { Route, Switch } from 'react-router';
+import { Provider } from 'react-redux';
 import Home from './pages/Home';
 import Details from './pages/Detail';
+import { store } from './redux/configureStore';
 
 function App() {
   return (
-    <Switch>
-      <Route path="/">
-        <Home />
-      </Route>
-      <Route path="/details">
-        <Details />
-      </Route>
-    </Switch>
+    <Provider store={store}>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route path="/details">
+          <Details />
+        </Route>
+      </Switch>
+    </Provider>
   );
 }
 

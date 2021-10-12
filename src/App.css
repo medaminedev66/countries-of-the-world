@@ -10,3 +10,10 @@
   height: 12rem;
   border-bottom: 1px solid black;
 }
+
+.countries {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}

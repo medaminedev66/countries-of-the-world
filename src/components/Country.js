@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Country() {
+function Country(props) {
   return (
     <div>
-      <h2>Title</h2>
-      <img src="" alt="flag" />
+      <h2>{props.obj.name}</h2>
+      <img src={props.obj.flags.png} alt="flag" />
     </div>
   );
 }
