@@ -14,7 +14,6 @@ function Home() {
 
   return (
     <div>
-      <Bar />
       <div className="continent">
         <Continent />
       </div>

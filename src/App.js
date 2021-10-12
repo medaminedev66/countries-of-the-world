@@ -4,12 +4,14 @@ import { Provider } from 'react-redux';
 import Home from './pages/Home';
 import Details from './pages/Detail';
 import { store } from './redux/configureStore';
+import Bar from './components/Bar';
 
 function App() {
   return (
     <Provider store={store}>
+      <Bar />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
         <Route path="/details">

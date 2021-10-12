@@ -1,9 +1,15 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 function Bar() {
+  const history = useHistory();
+  const handler = () => {
+    //Redirect to another route
+    history.push('/');
+  };
   return (
     <div className="bar">
-      <button>&lt;</button>
+      <button onClick={handler}>&lt;</button>
       <h2>Title</h2>
     </div>
   );

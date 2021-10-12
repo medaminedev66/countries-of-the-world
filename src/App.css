@@ -17,3 +17,23 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.info {
+  display: flex;
+  height: 5rem;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.flag {
+  height: 6rem;
+}
+.country-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 0.5rem;
+}

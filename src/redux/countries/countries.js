@@ -1,5 +1,6 @@
 const initialState = [];
 const FETCH_DATA = 'countries/FETCH_DATA';
+const UPDATE_STATE = 'countries/UPDATE_STATE';
 
 export const fetchData = () => async (dispatch) => {
   console.log('fetching');
@@ -12,10 +13,22 @@ export const fetchData = () => async (dispatch) => {
   });
 };
 
+export const selectCountry = (name) => ({
+  type: UPDATE_STATE,
+  payload: name,
+});
+
 export const countriesReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
       return action.payload;
+    case UPDATE_STATE:
+      return state.map((obj) => {
+        if (obj.name === action.payload) {
+          return { ...obj, selected: true };
+        }
+        return obj;
+      });
     default:
       return state;
   }

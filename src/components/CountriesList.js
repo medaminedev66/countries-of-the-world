@@ -1,17 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Country from './Country';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Redirect, useHistory } from 'react-router-dom';
+import { selectCountry } from '../redux/countries/countries';
 
 function CountriesList(props) {
   const countries = useSelector((state) => state.countriesReducer);
-  console.log(countries);
-  const showDetail = () => {
-    return 1;
+  const history = useHistory();
+  const [state, redirect] = useState({ redirect: false });
+  const dispatch = useDispatch();
+
+  const setRedirect = (name) => {
+    redirect({
+      redirect: true,
+    });
+    dispatch(selectCountry(name));
   };
+
+  // console.log(countries);
+  // const showDetail = () => {
+  //   return <Redirect to="/details" />;
+  // };
+
+  const renderRedirect = () => {
+    if (state.redirect) {
+      return <Redirect to="/details" />;
+      // history.push('/details');
+    }
+  };
+
   return (
-    <div className="countries" onClick={showDetail}>
+    <div className="countries">
+      {renderRedirect()}
       {countries.map((country) => (
-        <Country obj={country} />
+        <div onClick={() => setRedirect(country.name)}>
+          <Country obj={country} />
+        </div>
       ))}
     </div>
   );
