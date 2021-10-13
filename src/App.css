@@ -92,3 +92,15 @@ body {
   padding: 2rem 0;
   background-color: #5687e4;
 }
+
+button {
+  background: none;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+  font-size: xx-large;
+}
+button:active {
+  color: #2d4573;
+  transform: scale(1.5);
+}

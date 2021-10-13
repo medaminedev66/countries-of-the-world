@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
 import loading from '../loading.png';
+import { selectCountry } from '../redux/countries/countries';
 
 const RandomCountry = (props) => {
   // const countries = useSelector((state) => state.countriesReducer);
+  const dispatch = useDispatch();
+  const history = useHistory();
   const randomCountry =
     props.countries[Math.floor(Math.random() * props.countries.length)];
   console.log(randomCountry);
@@ -11,9 +15,16 @@ const RandomCountry = (props) => {
   //   const randomCountry =
   //     countries[Math.floor(Math.random() * countries.length)];
   // });
+  const renderRedirect = (name) => {
+    dispatch(selectCountry(name));
+    history.push('/details');
+  };
 
   return (
-    <div className="Random-country">
+    <div
+      className="Random-country"
+      onClick={() => renderRedirect(randomCountry.name)}
+    >
       <div className="country-select">
         <img
           className="flag"

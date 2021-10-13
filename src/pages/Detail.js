@@ -8,6 +8,7 @@ function Details() {
     <div>
       {countries.map((country) => {
         if (country.selected === true) {
+          console.log(country.independent);
           return (
             <div>
               <div className="head">
@@ -21,6 +22,10 @@ function Details() {
                 <p>{country.capital}</p>
               </div>
               <div className="info">
+                <h3>independent:</h3>
+                <p>{country.independent ? 'Yes' : 'No'}</p>
+              </div>
+              <div className="info">
                 <h3>Subregion:</h3>
                 <p>{country.subregion}</p>
               </div>
@@ -31,6 +36,14 @@ function Details() {
               <div className="info">
                 <h3>population:</h3>
                 <p>{country.population}</p>
+              </div>
+              <div className="info">
+                <h3>Time zone:</h3>
+                <p>{country.timezones}</p>
+              </div>
+              <div className="info">
+                <h3>currency:</h3>
+                <p>{country.currencies[0].name}</p>
               </div>
             </div>
           );
