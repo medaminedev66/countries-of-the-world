@@ -7,11 +7,12 @@ body {
 }
 
 .bar {
+  font-size: 13px;
   display: flex;
   height: 4rem;
   align-items: center;
+  padding: 0 1rem;
   justify-content: space-between;
-  border-bottom: 1px solid black;
   background-color: #4167ae;
 }
 
@@ -39,6 +40,7 @@ body {
   height: 6rem;
   border-radius: 0.5rem;
 }
+
 .country-select {
   display: flex;
   justify-content: center;
@@ -51,6 +53,10 @@ body {
   padding: 2rem 1rem;
   background-color: #5687e4;
   color: white;
+}
+
+.Random-country p {
+  text-align: center;
 }
 
 .country {
@@ -76,9 +82,6 @@ body {
 .countr {
   background-color: #4167ae;
 }
-.countr {
-  background-color: #4167ae;
-}
 
 .countr:nth-child(2n) {
   background-color: #2d4573;
@@ -100,7 +103,20 @@ button {
   width: 2rem;
   font-size: xx-large;
 }
+
 button:active {
   color: #2d4573;
   transform: scale(1.5);
+}
+
+span {
+  font-weight: 700;
+}
+
+.countries-title {
+  background-color: #3f62a4;
+  padding: 0.3rem 0.5rem;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
 }

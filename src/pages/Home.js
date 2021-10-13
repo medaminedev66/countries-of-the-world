@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Bar from '../components/Bar';
 import CountriesList from '../components/CountriesList';
-import Continent from '../components/RandomCountry';
-import { useDispatch } from 'react-redux';
 import { fetchData } from '../redux/countries/countries';
 
 function Home() {
@@ -14,6 +13,7 @@ function Home() {
 
   return (
     <div>
+      <Bar title="All countries" />
       <CountriesList />
     </div>
   );

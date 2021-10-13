@@ -3,7 +3,6 @@ const FETCH_DATA = 'countries/FETCH_DATA';
 const UPDATE_STATE = 'countries/UPDATE_STATE';
 
 export const fetchData = () => async (dispatch) => {
-  console.log('fetching');
   const response = await fetch('https://restcountries.com/v2/all');
   const data = await response.json();
   dispatch({

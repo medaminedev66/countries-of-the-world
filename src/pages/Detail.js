@@ -1,14 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Bar from '../components/Bar';
 
 function Details() {
   const countries = useSelector((state) => state.countriesReducer);
 
   return (
     <div>
+      <Bar title="Selected country" />
       {countries.map((country) => {
         if (country.selected === true) {
-          console.log(country.independent);
           return (
             <div>
               <div className="head">
@@ -16,6 +17,10 @@ function Details() {
                   <img className="flag" src={country.flags.png} alt="flag" />
                   <h2>{country.name}</h2>
                 </div>
+              </div>
+              <div className="countries-title">
+                {country.name}
+                &apos;s information
               </div>
               <div className="info">
                 <h3>capital:</h3>
@@ -48,6 +53,7 @@ function Details() {
             </div>
           );
         }
+        return 'Go back to home page and select a country';
       })}
     </div>
   );

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import Country from './Country';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect, useHistory } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import Country from './Country';
 import { selectCountry } from '../redux/countries/countries';
 import RandomCountry from './RandomCountry';
 
-function CountriesList(props) {
+function CountriesList() {
   const countries = useSelector((state) => state.countriesReducer);
-  const history = useHistory();
   const [state, redirect] = useState({ redirect: false });
   const dispatch = useDispatch();
 
@@ -18,16 +17,11 @@ function CountriesList(props) {
     dispatch(selectCountry(name));
   };
 
-  // console.log(countries);
-  // const showDetail = () => {
-  //   return <Redirect to="/details" />;
-  // };
-
   const renderRedirect = () => {
     if (state.redirect) {
       return <Redirect to="/details" />;
-      // history.push('/details');
     }
+    return '';
   };
 
   return (
@@ -35,10 +29,16 @@ function CountriesList(props) {
       <div className="continent">
         <RandomCountry countries={countries} />
       </div>
+      <div className="countries-title">All countries Selected by Alphabets</div>
       <div className="countries">
         {renderRedirect()}
         {countries.map((country) => (
-          <div className="countr" onClick={() => setRedirect(country.name)}>
+          <div
+            key={country.name}
+            className="countr"
+            onClick={() => setRedirect(country.name)}
+            aria-hidden="true"
+          >
             <Country obj={country} />
           </div>
         ))}

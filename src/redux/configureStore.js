@@ -7,4 +7,6 @@ const reducer = combineReducers({
   countriesReducer,
 });
 
-export const store = createStore(reducer, applyMiddleware(thunk));
+const store = createStore(reducer, applyMiddleware(thunk));
+
+export default store;
