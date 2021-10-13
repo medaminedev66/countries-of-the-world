@@ -6,7 +6,6 @@ export const fetchData = () => async (dispatch) => {
   console.log('fetching');
   const response = await fetch('https://restcountries.com/v2/all');
   const data = await response.json();
-  console.log(data);
   dispatch({
     type: FETCH_DATA,
     payload: data,

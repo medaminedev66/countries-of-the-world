@@ -3,6 +3,7 @@ import Country from './Country';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, useHistory } from 'react-router-dom';
 import { selectCountry } from '../redux/countries/countries';
+import RandomCountry from './RandomCountry';
 
 function CountriesList(props) {
   const countries = useSelector((state) => state.countriesReducer);
@@ -30,13 +31,18 @@ function CountriesList(props) {
   };
 
   return (
-    <div className="countries">
-      {renderRedirect()}
-      {countries.map((country) => (
-        <div onClick={() => setRedirect(country.name)}>
-          <Country obj={country} />
-        </div>
-      ))}
+    <div>
+      <div className="continent">
+        <RandomCountry countries={countries} />
+      </div>
+      <div className="countries">
+        {renderRedirect()}
+        {countries.map((country) => (
+          <div onClick={() => setRedirect(country.name)}>
+            <Country obj={country} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
