@@ -53,7 +53,7 @@ function Details() {
             </div>
           );
         }
-        return 'Go back to home page and select a country';
+        return '';
       })}
     </div>
   );
