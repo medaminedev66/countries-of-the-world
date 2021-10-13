@@ -38,7 +38,7 @@ function CountriesList(props) {
       <div className="countries">
         {renderRedirect()}
         {countries.map((country) => (
-          <div onClick={() => setRedirect(country.name)}>
+          <div className="countr" onClick={() => setRedirect(country.name)}>
             <Country obj={country} />
           </div>
         ))}

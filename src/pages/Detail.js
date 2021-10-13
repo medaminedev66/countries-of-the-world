@@ -10,9 +10,11 @@ function Details() {
         if (country.selected === true) {
           return (
             <div>
-              <div className="country-select">
-                <img className="flag" src={country.flags.png} alt="flag" />
-                <h2>{country.name}</h2>
+              <div className="head">
+                <div className="country-select">
+                  <img className="flag" src={country.flags.png} alt="flag" />
+                  <h2>{country.name}</h2>
+                </div>
               </div>
               <div className="info">
                 <h3>capital:</h3>

@@ -13,7 +13,7 @@ const RandomCountry = (props) => {
   // });
 
   return (
-    <>
+    <div className="Random-country">
       <div className="country-select">
         <img
           className="flag"
@@ -26,7 +26,7 @@ const RandomCountry = (props) => {
         {' '}
         Click on {randomCountry ? randomCountry.name : 'Load...'} to discover
       </p>
-    </>
+    </div>
   );
 };
 
