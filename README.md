@@ -66,6 +66,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse for giving me this chance
+- The design template provider: [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 - To my Stand Up Team and coding partners who kept my morale up!
 - The amazing code reviewers for making me improve every day :thumbsup:
 
