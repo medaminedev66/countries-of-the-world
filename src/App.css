@@ -1,5 +1,5 @@
 * {
-  color: white;
+  /* color: white; */
 }
 
 body {
@@ -14,6 +14,7 @@ body {
   padding: 0 1rem;
   justify-content: space-between;
   background-color: #4167ae;
+  color: white;
 }
 
 .countries {
@@ -30,6 +31,7 @@ body {
   align-items: center;
   padding: 0 1rem;
   background-color: #4167ae;
+  color: white;
 }
 
 .info:nth-child(2n) {
@@ -47,6 +49,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   background-color: #5687e4;
+  color: white;
 }
 
 .Random-country {
@@ -96,16 +99,7 @@ body {
   background-color: #5687e4;
 }
 
-button {
-  background: none;
-  border: none;
-  height: 2rem;
-  width: 2rem;
-  font-size: xx-large;
-}
-
 button:active {
-  color: #2d4573;
   transform: scale(1.5);
 }
 
@@ -119,4 +113,9 @@ span {
   margin: 0;
   font-size: 14px;
   font-weight: 500;
+  color: white;
+}
+
+.mod {
+  color: black;
 }

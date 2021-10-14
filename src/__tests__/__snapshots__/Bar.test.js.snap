@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test the Quote components matches the snapshot 1`] = `
+<div
+  className="bar"
+  data-testid="bar"
+>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <h2 />
+</div>
+`;

@@ -7,6 +7,8 @@ import RandomCountry from './RandomCountry';
 
 function CountriesList() {
   const countries = useSelector((state) => state.countriesReducer);
+  const settings = useSelector((state) => state.settingReducer);
+  console.log(settings[0].selectBy);
   const [state, redirect] = useState({ redirect: false });
   const dispatch = useDispatch();
 
@@ -19,9 +21,20 @@ function CountriesList() {
 
   const renderRedirect = () => {
     if (state.redirect) {
-      return <Redirect to="/details" />;
+      return <Redirect to="/react-capstone/details" />;
     }
     return '';
+  };
+
+  const compare = (a, b) => {
+    const type = settings[0].selectBy;
+    if (a[type] < b[type]) {
+      return 1;
+    }
+    if (a[type] > b[type]) {
+      return -1;
+    }
+    return 0;
   };
 
   return (
@@ -32,7 +45,7 @@ function CountriesList() {
       <div className="countries-title">All countries Selected by Alphabets</div>
       <div className="countries">
         {renderRedirect()}
-        {countries.map((country) => (
+        {countries.sort(compare).map((country) => (
           <div
             key={country.name}
             className="countr"

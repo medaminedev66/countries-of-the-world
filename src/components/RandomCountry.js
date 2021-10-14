@@ -12,7 +12,7 @@ const RandomCountry = (props) => {
   const randomCountry = countries[Math.floor(Math.random() * countries.length)];
   const renderRedirect = (name) => {
     dispatch(selectCountry(name));
-    history.push('/details');
+    history.push('/react-capstone/details');
   };
 
   return (
@@ -30,7 +30,7 @@ const RandomCountry = (props) => {
         <h2>{randomCountry ? randomCountry.name : 'Picking...'}</h2>
       </div>
       <p>
-        Let&apos;s discover
+        Let&apos;s discover&nbsp;
         <span>{randomCountry ? randomCountry.name : '?'}</span>
       </p>
     </div>

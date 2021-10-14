@@ -11,10 +11,21 @@ function Home() {
     dispatch(fetchData());
   }, [dispatch]);
 
+  const select = (type) => {
+    switch (type) {
+      case 'population':
+        return 'population';
+      default:
+        break;
+    }
+    return undefined;
+  };
+
+  const selectBy = select();
   return (
     <div>
-      <Bar title="All countries" />
-      <CountriesList />
+      <Bar title="All countries" select={select} />
+      <CountriesList select={selectBy} />
     </div>
   );
 }
