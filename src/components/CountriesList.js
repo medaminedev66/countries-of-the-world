@@ -42,7 +42,7 @@ function CountriesList() {
         <RandomCountry countries={countries} />
       </div>
       <div className="countries-title">All countries Selected by Alphabets</div>
-      <div className="countries">
+      <div className="countries" data-testid="countries">
         {renderRedirect()}
         {countries.sort(compare).map((country) => (
           <div

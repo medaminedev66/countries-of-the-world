@@ -20,6 +20,7 @@ const RandomCountry = (props) => {
       className="Random-country"
       onClick={() => renderRedirect(randomCountry.name)}
       aria-hidden="true"
+      data-testid="Random-country"
     >
       <div className="country-select">
         <img

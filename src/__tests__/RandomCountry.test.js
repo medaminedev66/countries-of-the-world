@@ -2,17 +2,19 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import Bar from '../components/Bar';
-
+import RandomCountry from '../components/RandomCountry';
 import store from '../redux/configureStore';
 
-describe('test Bar components', () => {
-  const title = 'about';
+describe('test the RandomCountry component', () => {
+  const countries = [
+    { name: 'Morocco', flags: 'mr' },
+    { name: 'Usa', flags: 'US' },
+  ];
   it('matches the snapshot', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <Bar title={title} />
+          <RandomCountry countries={countries} />
         </Provider>,
       )
       .toJSON();
@@ -22,9 +24,9 @@ describe('test Bar components', () => {
   it('renders correctly', () => {
     const { queryByTestId } = render(
       <Provider store={store}>
-        <Bar title={title} />
+        <RandomCountry countries={countries} />
       </Provider>,
     );
-    expect(queryByTestId('bar')).toBeTruthy();
+    expect(queryByTestId('Random-country')).toBeTruthy();
   });
 });

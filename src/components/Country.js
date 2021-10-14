@@ -6,7 +6,7 @@ function Country(props) {
   const { obj } = props;
 
   return (
-    <div className="country">
+    <div className="country" datatestId="country">
       <img className="flag-country" src={obj.flags.png} alt="flag" />
       <p className="h2 p">{obj.name}</p>
       <p className="p">

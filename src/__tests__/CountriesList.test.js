@@ -2,17 +2,15 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import Bar from '../components/Bar';
-
+import CountriesList from '../components/CountriesList';
 import store from '../redux/configureStore';
 
-describe('test Bar components', () => {
-  const title = 'about';
+describe('test the CountriesList component', () => {
   it('matches the snapshot', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <Bar title={title} />
+          <CountriesList />
         </Provider>,
       )
       .toJSON();
@@ -22,9 +20,9 @@ describe('test Bar components', () => {
   it('renders correctly', () => {
     const { queryByTestId } = render(
       <Provider store={store}>
-        <Bar title={title} />
+        <CountriesList />
       </Provider>,
     );
-    expect(queryByTestId('bar')).toBeTruthy();
+    expect(queryByTestId('countries')).toBeTruthy();
   });
 });
