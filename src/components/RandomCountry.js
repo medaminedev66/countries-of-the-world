@@ -12,7 +12,7 @@ const RandomCountry = (props) => {
   const randomCountry = countries[Math.floor(Math.random() * countries.length)];
   const renderRedirect = (name) => {
     dispatch(selectCountry(name));
-    history.push('/react-capstone/details');
+    history.push('/countries-of-the-world/details');
   };
 
   return (

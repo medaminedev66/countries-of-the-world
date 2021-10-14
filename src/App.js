@@ -10,10 +10,10 @@ function App() {
   return (
     <Provider store={store}>
       <Switch>
-        <Route exact path="/react-capstone/">
+        <Route exact path="/countries-of-the-world/">
           <Home />
         </Route>
-        <Route path="/react-capstone/details">
+        <Route path="/countries-of-the-world/details">
           <Details />
         </Route>
       </Switch>

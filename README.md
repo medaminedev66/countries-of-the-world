@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Countries of all the World
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React capstone project (Countries of all the World) is about building a mobile web application to check a list of metrics (Countries) I created making use of React and Redux.
 
-## Available Scripts
+## Built with
 
-In the project directory, you can run:
+- HTML/CSS
+- React-Redux
+- Node.JS
+- REST Countries API
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you want a copy of this file go to the github repository and download it from there
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Space Travler's Hub](https://github.com/ridaarif98/space_travlers_hub)
 
-### `npm test`
+### Live
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[LiveDemo](https://medaminedev66.github.io/countries-of-the-world/)
 
-### `npm run build`
+### Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```cmd
+ git clone https://github.com/medaminedev66/countries-of-the-world
+ cd countries-of-the-world
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```cmd
+npm install
+npm run build
+```
 
-### `npm run eject`
+### Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```cmd
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+👤 **Amine Smahi**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- GitHub: [@medaminedev66](https://github.com/medaminedev66)
+- Twitter: [@medaminesmahi](https://twitter.com/medaminesmahi)
+- LinkedIn: [Mohammed Amine Smahi ](https://www.linkedin.com/in/mohammed-amine-smahi-1b8615187/)
 
-## Learn More
+=======
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions, issues, and feature requests are welcome!
 
-### Code Splitting
+Feel free to check the [issues page](https://github.com/medaminedev66/countries-of-the-world/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+=======
 
-### Analyzing the Bundle Size
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Give a ⭐️ if you like this project!
 
-### Making a Progressive Web App
+=======
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
+- Microverse for giving me this chance
+- To my Stand Up Team and coding partners who kept my morale up!
+- The amazing code reviewers for making me improve every day :thumbsup:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======

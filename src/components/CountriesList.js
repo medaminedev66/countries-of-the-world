@@ -20,7 +20,7 @@ function CountriesList() {
 
   const renderRedirect = () => {
     if (state.redirect) {
-      return <Redirect to="/react-capstone/details" />;
+      return <Redirect to="/countries-of-the-world/details" />;
     }
     return '';
   };

@@ -13,7 +13,7 @@ function Bar(props) {
   const dispatch = useDispatch();
 
   const handler = () => {
-    history.push('/react-capstone/');
+    history.push('/countries-of-the-world/');
   };
 
   const [show, setShow] = useState(false);
