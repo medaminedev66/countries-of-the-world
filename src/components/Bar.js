@@ -1,12 +1,9 @@
-/* eslint-disable react/jsx-closing-tag-location */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable react/self-closing-comp */
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { PropTypes } from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import { Modal, Button, ListGroup } from 'react-bootstrap';
+import { Modal, ListGroup } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { selectedBy } from '../redux/countries/settings';
 
@@ -60,7 +57,7 @@ function Bar(props) {
         <Modal.Body>
           <ListGroup>
             <ListGroup.Item onClick={() => select('name')}>
-              Name(Z-A)
+              Name (Z-A)
             </ListGroup.Item>
             <ListGroup.Item onClick={() => select('population')}>
               population
@@ -70,14 +67,6 @@ function Bar(props) {
             </ListGroup.Item>
           </ListGroup>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
       </Modal>
     </div>
   );

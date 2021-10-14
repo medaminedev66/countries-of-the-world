@@ -23,11 +23,11 @@ function Details() {
                 &apos;s information
               </div>
               <div className="info">
-                <h3>capital:</h3>
+                <h3>Capital:</h3>
                 <p>{country.capital}</p>
               </div>
               <div className="info">
-                <h3>independent:</h3>
+                <h3>Independent:</h3>
                 <p>{country.independent ? 'Yes' : 'No'}</p>
               </div>
               <div className="info">
@@ -39,7 +39,7 @@ function Details() {
                 <p>{country.region}</p>
               </div>
               <div className="info">
-                <h3>population:</h3>
+                <h3>Population:</h3>
                 <p>{country.population}</p>
               </div>
               <div className="info">
@@ -47,8 +47,12 @@ function Details() {
                 <p>{country.timezones}</p>
               </div>
               <div className="info">
-                <h3>currency:</h3>
-                <p>{country.currencies[0].name}</p>
+                <h3>Currency:</h3>
+                <p>
+                  {country.currencies
+                    ? country.currencies[0].name
+                    : 'not exist'}
+                </p>
               </div>
             </div>
           );

@@ -8,7 +8,6 @@ import RandomCountry from './RandomCountry';
 function CountriesList() {
   const countries = useSelector((state) => state.countriesReducer);
   const settings = useSelector((state) => state.settingReducer);
-  console.log(settings[0].selectBy);
   const [state, redirect] = useState({ redirect: false });
   const dispatch = useDispatch();
 
