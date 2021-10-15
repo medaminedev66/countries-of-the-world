@@ -1,6 +1,9 @@
 # Countries of all the World
 
-This React capstone project (Countries of all the World) is about building a mobile web application to check a list of metrics (Countries) I created making use of React and Redux.
+This React capstone project is about building a mobile web application to check a list of metrics using React and Redux. 
+I selected an API that provides numeric data about countries then I built the webapp around it. The webapp has several pages:
+- Home page with a list of countries that could be filtered by some parameters(Region, population...) and a random country at the top.
+- The detail page for the country details; in the screenshot, the detail page for the Cook Islands country with its information(Capital,  Population, Currency, Region...).
 
 <img src="./screenshots/home.PNG" alt="drawing" width="360px"/>  <img src="./screenshots/detail.PNG" alt="drawing" width="359px"/>
 
@@ -15,7 +18,7 @@ This React capstone project (Countries of all the World) is about building a mob
 
 If you want a copy of this file go to the github repository and download it from there
 
-- [Space Travler's Hub](https://github.com/ridaarif98/space_travlers_hub)
+- [Countries of the World](https://github.com/ridaarif98/space_travlers_hub)
 
 ### Live
 
