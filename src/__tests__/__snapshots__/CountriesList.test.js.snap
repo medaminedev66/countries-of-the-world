@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test the CountriesList component matches the snapshot 1`] = `
+<div>
+  <div
+    className="continent"
+  >
+    <div
+      aria-hidden="true"
+      className="Random-country"
+      data-testid="Random-country"
+      onClick={[Function]}
+    >
+      <div
+        className="country-select"
+      >
+        <img
+          alt="flag"
+          className="flag"
+          src="loading.png"
+        />
+        <h2>
+          Picking...
+        </h2>
+      </div>
+      <p>
+        Let's discover 
+        <span>
+          ?
+        </span>
+      </p>
+    </div>
+  </div>
+  <div
+    className="countries-title"
+  >
+    All countries Selected by Alphabets
+  </div>
+  <div
+    className="countries"
+    data-testid="countries"
+  >
+    
+  </div>
+</div>
+`;
