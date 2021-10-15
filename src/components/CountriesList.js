@@ -41,7 +41,10 @@ function CountriesList() {
       <div className="continent">
         <RandomCountry countries={countries} />
       </div>
-      <div className="countries-title">All countries Selected by Alphabets</div>
+      <div className="countries-title">
+        All countries Selected by&nbsp;
+        {settings[0].selectBy ? settings[0].selectBy : 'Alphabets'}
+      </div>
       <div className="countries" data-testid="countries">
         {renderRedirect()}
         {countries.sort(compare).map((country) => (
