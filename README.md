@@ -2,7 +2,7 @@
 
 This React capstone project (Countries of all the World) is about building a mobile web application to check a list of metrics (Countries) I created making use of React and Redux.
 
-![home](./screenshots/home.PNG)  ![DETAIL](./screenshots/detail.PNG)
+<img src="./screenshots/home.PNG" alt="drawing" width="360px"/>  <img src="./screenshots/detail.PNG" alt="drawing" width="359px"/>
 
 ## Built with
 
