@@ -1,9 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux';
 import Country from '../components/Country';
-import store from '../redux/configureStore';
+import { ReduxRenderer, renderWithRedux } from './Mocks/reduxStore';
 
 describe('test the Country component', () => {
   const country = {
@@ -11,22 +8,12 @@ describe('test the Country component', () => {
     flags: 'flag',
   };
   it('matches the snapshot', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <Country obj={country} />
-        </Provider>,
-      )
-      .toJSON();
+    const tree = ReduxRenderer(<Country obj={country} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly', () => {
-    const { getByText } = render(
-      <Provider store={store}>
-        <Country obj={country} />
-      </Provider>,
-    );
+    const { getByText } = renderWithRedux(<Country obj={country} />);
     expect(getByText('Morocco')).not.toBeNull();
   });
 });

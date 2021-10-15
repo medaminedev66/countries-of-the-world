@@ -1,28 +1,16 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux';
 import CountriesList from '../components/CountriesList';
-import store from '../redux/configureStore';
+import { ReduxRenderer, renderWithRedux } from './Mocks/reduxStore';
+// import store from '../redux/configureStore';
 
 describe('test the CountriesList component', () => {
   it('matches the snapshot', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <CountriesList />
-        </Provider>,
-      )
-      .toJSON();
+    const tree = ReduxRenderer(<CountriesList />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly', () => {
-    const { queryByTestId } = render(
-      <Provider store={store}>
-        <CountriesList />
-      </Provider>,
-    );
+    const { queryByTestId } = renderWithRedux(<CountriesList />);
     expect(queryByTestId('countries')).toBeTruthy();
   });
 });

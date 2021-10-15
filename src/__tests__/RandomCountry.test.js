@@ -1,31 +1,19 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux';
 import RandomCountry from '../components/RandomCountry';
-import store from '../redux/configureStore';
+import { ReduxRenderer, renderWithRedux } from './Mocks/reduxStore';
 
 describe('test the RandomCountry component', () => {
-  const countries = [
-    { name: 'Morocco', flags: 'mr' },
-    { name: 'Usa', flags: 'US' },
-  ];
+  const countries = [{ name: 'Morocco', flags: 'mr' }];
   it('matches the snapshot', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <RandomCountry countries={countries} />
-        </Provider>,
-      )
-      .toJSON();
+    const tree = ReduxRenderer(
+      <RandomCountry countries={countries} />,
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly', () => {
-    const { queryByTestId } = render(
-      <Provider store={store}>
-        <RandomCountry countries={countries} />
-      </Provider>,
+    const { queryByTestId } = renderWithRedux(
+      <RandomCountry countries={countries} />,
     );
     expect(queryByTestId('Random-country')).toBeTruthy();
   });

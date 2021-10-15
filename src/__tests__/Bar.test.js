@@ -1,30 +1,16 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux';
 import Bar from '../components/Bar';
-
-import store from '../redux/configureStore';
+import { ReduxRenderer, renderWithRedux } from './Mocks/reduxStore';
 
 describe('test Bar components', () => {
   const title = 'about';
   it('matches the snapshot', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <Bar title={title} />
-        </Provider>,
-      )
-      .toJSON();
+    const tree = ReduxRenderer(<Bar title={title} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly', () => {
-    const { queryByTestId } = render(
-      <Provider store={store}>
-        <Bar title={title} />
-      </Provider>,
-    );
+    const { queryByTestId } = renderWithRedux(<Bar title={title} />);
     expect(queryByTestId('bar')).toBeTruthy();
   });
 });
