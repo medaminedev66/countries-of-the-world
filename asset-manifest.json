@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/countries-of-the-world/static/css/main.78b61491.chunk.css",
-    "main.js": "/countries-of-the-world/static/js/main.6ca9c886.chunk.js",
-    "main.js.map": "/countries-of-the-world/static/js/main.6ca9c886.chunk.js.map",
+    "main.css": "/countries-of-the-world/static/css/main.e353ff3d.chunk.css",
+    "main.js": "/countries-of-the-world/static/js/main.eab2aafb.chunk.js",
+    "main.js.map": "/countries-of-the-world/static/js/main.eab2aafb.chunk.js.map",
     "runtime-main.js": "/countries-of-the-world/static/js/runtime-main.2f00714c.js",
     "runtime-main.js.map": "/countries-of-the-world/static/js/runtime-main.2f00714c.js.map",
     "static/css/2.c1256375.chunk.css": "/countries-of-the-world/static/css/2.c1256375.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.3df2346c.chunk.js.map": "/countries-of-the-world/static/js/2.3df2346c.chunk.js.map",
     "index.html": "/countries-of-the-world/index.html",
     "static/css/2.c1256375.chunk.css.map": "/countries-of-the-world/static/css/2.c1256375.chunk.css.map",
-    "static/css/main.78b61491.chunk.css.map": "/countries-of-the-world/static/css/main.78b61491.chunk.css.map",
+    "static/css/main.e353ff3d.chunk.css.map": "/countries-of-the-world/static/css/main.e353ff3d.chunk.css.map",
     "static/js/2.3df2346c.chunk.js.LICENSE.txt": "/countries-of-the-world/static/js/2.3df2346c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2f00714c.js",
     "static/css/2.c1256375.chunk.css",
     "static/js/2.3df2346c.chunk.js",
-    "static/css/main.78b61491.chunk.css",
-    "static/js/main.6ca9c886.chunk.js"
+    "static/css/main.e353ff3d.chunk.css",
+    "static/js/main.eab2aafb.chunk.js"
   ]
 }
