@@ -18,7 +18,7 @@ I selected an API that provides numeric data about countries then I built the we
 
 If you want a copy of this file go to the github repository and download it from there
 
-- [Countries of the World](https://github.com/ridaarif98/space_travlers_hub)
+- [Countries of the World](https://github.com/ridaarif98/countries-of-the-world)
 
 ### Live
 
